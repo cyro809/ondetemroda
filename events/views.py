@@ -4,6 +4,6 @@ import requests
 
 def index(request):
     r = requests.get('http://localhost:8080/events')
-    rodas = r.json()
+    events = r.json()
 
-    return render(request, 'rodas/index.html', { 'rodas': rodas})
+    return render(request, 'events/index.html', { 'events': events})
