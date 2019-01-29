@@ -1,3 +1,12 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/events/event.css' %}">
+
+<h1 class="event__title">Eventos e Rodas</h1>
 {% for event in events %}
-    <h1>{{ event.NomeEvento }}</h1>
+    <div class="event__container">
+        <p class="event__name">{{ event.NomeEvento }}</p>
+        <p class="event__address">Endereço: {{event.Endereco}}</p>
+        <p class="event__group">Grupo: {{event.Grupo}}</p>
+    </div>
 {% endfor %}
