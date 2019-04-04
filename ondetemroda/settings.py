@@ -25,7 +25,7 @@ SECRET_KEY = 'w!kc5e%a)8+l8@)ky4#qkn+zp7i)hp0j7*@d9@_0!(u&=(d7bm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ondetemroda-env.6p3pcpjdgs.us-west-2.elasticbeanstalk.com', 'localhost']
 
 
 # Application definition
