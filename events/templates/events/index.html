@@ -1,12 +1,15 @@
+{% extends 'base.html' %}
+
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/events/event.css' %}">
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/event_item.css' %}">
+    {{ block.super }}
+{% endblock %}
 
-<h1 class="event__title">Eventos e Rodas</h1>
-{% for event in events %}
-    <div class="event__container">
-        <p class="event__name">{{ event.NomeEvento }}</p>
-        <p class="event__address">Endereço: {{event.Endereco}}</p>
-        <p class="event__group">Grupo: {{event.Grupo}}</p>
-    </div>
-{% endfor %}
+{% block body %}
+    <h1 class="event__title">Eventos e Rodas</h1>
+    {% for event in events %}
+        {% include "events/includes/components/event_item.html" %}
+    {% endfor %}
+{% endblock %}

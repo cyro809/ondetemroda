@@ -1,0 +1,9 @@
+{% load static %}
+<div class="event__container">
+    <img src="{% static 'img/placeholder240x180.png' %}" class="event__image"/>
+    <div class="event__info">
+        <p class="event__name">{{ event.NomeEvento }}</p>
+        <p class="event__address">Endereço: {{event.Endereco}}</p>
+        <p class="event__group">Grupo: {{event.Grupo}}</p>
+    </div>
+</div>
