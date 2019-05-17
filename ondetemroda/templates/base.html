@@ -4,6 +4,9 @@
     <head>
         <title>{% block title %}{% endblock %}</title>
         <meta name='description' content='{% block description%}{% endblock%}'>
+
+        <link href="{% static 'css/fonts.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css/index.css' %}" rel="stylesheet" media="screen">
     </head>
     <body>
     {% block body %}{% endblock %}
