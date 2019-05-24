@@ -6,7 +6,6 @@
 .event__container {
     display: flex;
     margin-bottom: 16px;
-    padding: 8px;
 }
 
 .event__image {
