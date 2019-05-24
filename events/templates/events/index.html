@@ -8,8 +8,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1 class="event__title">Eventos e Rodas</h1>
-    {% for event in events %}
-        {% include "events/includes/components/event_item.html" %}
-    {% endfor %}
+    <div class="container bg-light">
+        <h1 class="event__title">Eventos e Rodas</h1>
+        <div class="row">
+        {% for event in events %}
+            {% include "events/includes/components/event_item.html" %}
+        {% endfor %}
+        </div>
+    </div>
 {% endblock %}
