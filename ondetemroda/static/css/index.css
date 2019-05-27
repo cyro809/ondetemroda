@@ -1,14 +1,17 @@
 .home_title {
     font-family: 'Roboto Black', sans-serif;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 .home_description {
     font-family: 'Roboto Regular', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .home_coming-soon {
     font-family: 'Roboto Bold', sans-serif;
     font-size: 24px;
+}
+.home_description__container {
+    max-width: 42em;
 }

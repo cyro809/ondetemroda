@@ -3,7 +3,9 @@
     <img src="{% static 'img/placeholder240x180.png' %}" class="event__image rounded-left"/>
     <div class="event__info">
         <p class="event__name">{{ event.NomeEvento }}</p>
-        <p class="event__address">Endereço: {{event.Endereco}}</p>
-        <p class="event__group">Grupo: {{event.Grupo}}</p>
+        <p class="event-info__text"><span class="event-info_label">Endereço:</span> {{event.Endereco}}</p>
+        <p class="event-info__text"><span class="event-info_label">Data:</span> 1º sábado do mês</p>
+        <p class="event-info__text"><span class="event-info_label">Grupo:</span> {{event.Grupo}}</p>
+        <p class="event-info__text"><span class="event-info_label">Responsável:</span> {{event.Responsavel}}</p>
     </div>
 </div>

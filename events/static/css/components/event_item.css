@@ -18,6 +18,11 @@
     font-weight: bold;
 }
 
-.event__address, .event__group {
+.event-info__text {
     font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    margin-bottom: 0.5rem;
+}
+.event-info_label {
+    font-family: 'Roboto Bold', Arial, Helvetica, sans-serif;
 }
