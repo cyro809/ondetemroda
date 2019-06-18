@@ -4,6 +4,12 @@
 
 {% block head %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/components/event_item.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/map.css' %}">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX81CTR1RjAQwnG-9lWX17WzLojyFS7P0&callback=initMap">
+    </script>
+    <script src="{% static 'js/map.js' %}">
+    </script>
     {{ block.super }}
 {% endblock %}
 {% block title %}Lista de Rodas e Eventos de Capoeira | Onde Tem Roda{% endblock %}
@@ -17,5 +23,6 @@
             {% include "events/includes/components/event_item.html" %}
         {% endfor %}
         </div>
+        {% include "events/includes/components/map.html" %}
     </div>
 {% endblock %}

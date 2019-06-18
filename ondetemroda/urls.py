@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('events/', include('events.urls')),
     path('', TemplateView.as_view(template_name="index.html")),
-    path('find_test/', TemplateView.as_view(template_name="find_test.html"))
+    path('find_test/', TemplateView.as_view(template_name="find_test.html")),
+    path('places_test/', TemplateView.as_view(template_name="places_test.html"))
 ]
