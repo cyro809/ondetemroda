@@ -41,7 +41,7 @@
           center: {lat: -34.397, lng: 150.644}
         });
         var geocoder = new google.maps.Geocoder();
-        var address = 'Rua Vandenkolk, 23 '
+        var address = 'Rua Vandenkolk, 23 - Olaria'
         geocodeAddress(geocoder, map, address);
       }
 
@@ -49,6 +49,8 @@
         geocoder.geocode({'address': address}, function(results, status) {
           if (status === 'OK') {
             console.log(results[0])
+            console.log(results[0].geometry.location.lat())
+            console.log(results[0].geometry.location.lng())
             resultsMap.setCenter(results[0].geometry.location);
             resultsMap.setZoom(18);
             var marker = new google.maps.Marker({

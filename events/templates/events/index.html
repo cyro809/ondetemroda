@@ -5,9 +5,7 @@
 {% block head %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/components/event_item.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/components/map.css' %}">
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX81CTR1RjAQwnG-9lWX17WzLojyFS7P0&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX81CTR1RjAQwnG-9lWX17WzLojyFS7P0"></script>
     <script src="{% static 'js/map.js' %}">
     </script>
     {{ block.super }}
@@ -24,5 +22,11 @@
         {% endfor %}
         </div>
         {% include "events/includes/components/map.html" %}
+        <script type="text/javascript">
+            var locations = {{ locations|safe }};
+            initMap(locations);
+        </script>
+
+        </script>
     </div>
 {% endblock %}
