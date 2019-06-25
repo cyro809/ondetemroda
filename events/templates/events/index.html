@@ -12,16 +12,20 @@
 {% endblock %}
 {% block title %}Lista de Rodas e Eventos de Capoeira | Onde Tem Roda{% endblock %}
 {% block body %}
-    <div class="events__main">
-        <div class="container text-center my-5">
-            <h1 class="event__title text-light">Eventos e Rodas</h1>
+    <div class="events__main row">
+        <div class="col">
+            <div class="container text-center my-5">
+                <h1 class="event__title text-light">Eventos e Rodas</h1>
+            </div>
+            <div class="py-5 px-5 row">
+            {% for event in events %}
+                {% include "events/includes/components/event_item.html" %}
+            {% endfor %}
+            </div>
         </div>
-        <div class="py-5 px-5 row">
-        {% for event in events %}
-            {% include "events/includes/components/event_item.html" %}
-        {% endfor %}
+        <div class="col m-5">
+            {% include "events/includes/components/map.html" %}
         </div>
-        {% include "events/includes/components/map.html" %}
         <script type="text/javascript">
             var locations = {{ locations|safe }};
             initMap(locations);
