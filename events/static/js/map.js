@@ -1,7 +1,7 @@
 function initMap(locations) {
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
+    zoom: 10,
     center: new google.maps.LatLng(-22.919822, -43.463149),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });

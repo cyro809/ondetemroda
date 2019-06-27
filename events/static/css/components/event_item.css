@@ -10,17 +10,23 @@
 
 .event__image {
     margin-right: 16px;
+    height: 128px;
 }
 
 .event__name {
     font-family: 'Roboto Bold', Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.event__info {
+    font-size: 14px;
 }
 
 .event-info__text {
     font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
-    line-height: 20px;
+    line-height: 16px;
     margin-bottom: 0.5rem;
 }
 .event-info_label {
