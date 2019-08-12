@@ -17,8 +17,8 @@
             <h1 class="event__title text-light">Eventos e Rodas</h1>
         </div>
         <div class="row">
-            <div class="col">
-                <div class="">
+            <div class="col" style="height: 800px; overflow-y: scroll;">
+                <div class="" style="padding-right: 8px;">
                 {% for event in events %}
                     {% include "events/includes/components/event_item.html" %}
                 {% endfor %}
