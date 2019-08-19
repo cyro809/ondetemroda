@@ -1,0 +1,8 @@
+.events__container {
+  flex-direction: column-reverse;
+}
+
+.event__title {
+  font-family: 'Roboto Black', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}

@@ -1,7 +1,4 @@
-.event__title {
-    font-family: 'Roboto Black', Arial, Helvetica, sans-serif;
-    font-size: 36px;
-}
+
 
 .event__container {
     display: flex;
@@ -10,7 +7,7 @@
 
 .event__image {
     margin-right: 16px;
-    height: 128px;
+    height: 64px;
 }
 
 .event__name {
