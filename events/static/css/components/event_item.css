@@ -3,18 +3,14 @@
 .event__container {
     display: flex;
     margin-bottom: 16px;
-}
-
-.event__image {
-    margin-right: 16px;
-    height: 64px;
+    flex-direction: column;
 }
 
 .event__name {
     font-family: 'Roboto Bold', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .event__info {
@@ -24,7 +20,7 @@
 .event-info__text {
     font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
     line-height: 16px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.05rem;
 }
 .event-info_label {
     font-family: 'Roboto Bold', Arial, Helvetica, sans-serif;

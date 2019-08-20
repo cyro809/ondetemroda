@@ -1,11 +1,11 @@
 {% load static %}
 <div class="event__container rounded shadow px-0 bg-light row">
-    <img src="{% static 'img/placeholder240x180.png' %}" class="event__image rounded-left"/>
-    <div class="event__info">
+    <div class="event__info px-2">
         <p class="event__name">{{ event.NomeEvento }}</p>
         <p class="event-info__text"><span class="event-info_label">Endereço:</span> {{event.Endereco}}</p>
         <p class="event-info__text"><span class="event-info_label">Data:</span> {{ event.EventDate }}</p>
         <p class="event-info__text"><span class="event-info_label">Grupo:</span> {{event.Grupo}}</p>
         <p class="event-info__text"><span class="event-info_label">Responsável:</span> {{event.Responsavel}}</p>
     </div>
+    <img src="{% static 'img/placeholder240x180.png' %}" class="event__image rounded"/>
 </div>
