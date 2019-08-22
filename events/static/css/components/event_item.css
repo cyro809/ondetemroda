@@ -3,7 +3,14 @@
 .event__container {
     display: flex;
     margin-bottom: 16px;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+}
+
+.event__image {
+    height: 96px;
+    width: 96px;
+    margin-right: 4px;
 }
 
 .event__name {
@@ -15,6 +22,10 @@
 
 .event__info {
     font-size: 14px;
+    width: min-content;
+    flex-grow: 1;
+    width: -webkit-min-content;
+    width: -moz-min-content;
 }
 
 .event-info__text {
