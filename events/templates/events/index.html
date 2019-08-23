@@ -16,15 +16,15 @@
         <div class="text-center my-5">
             <h1 class="event__title text-light">Eventos e Rodas</h1>
         </div>
-        <div class="row d-flex events-list__container">
-            <div class="col-lg" style="overflow-y: scroll;">
+        <div class="row d-flex flex-column-reverse flex-lg-row">
+            <div class="col-lg-5" style="overflow-y: scroll;">
                 <div class="px-2">
                 {% for event in events %}
                     {% include "events/includes/components/event_item.html" %}
                 {% endfor %}
                 </div>
             </div>
-            <div class="col-lg-6 px-2">
+            <div class="col-lg-7 px-2">
                 {% include "events/includes/components/map.html" %}
             </div>
         </div>

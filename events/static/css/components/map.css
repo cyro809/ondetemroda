@@ -3,3 +3,10 @@
     height: 300px;
     margin-bottom: 32px;
 }
+
+@media screen and (min-width: 992px) {
+    .map-container, #map {
+        height: 600px;
+        margin-bottom: 0;
+    }
+}
