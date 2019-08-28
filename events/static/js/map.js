@@ -5,7 +5,7 @@ function initMap(locations) {
     center: new google.maps.LatLng(-22.919822, -43.463149),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
-
+  var infoWindow = new google.maps.InfoWindow();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -14,7 +14,7 @@ function initMap(locations) {
       };
 
       infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
+      infoWindow.setContent('Você está aqui.');
       infoWindow.open(map);
       map.setCenter(pos);
     }, function() {
@@ -25,11 +25,11 @@ function initMap(locations) {
     handleLocationError(false, infoWindow, map.getCenter());
   }
 
-  var infowindow = new google.maps.InfoWindow();
-  addMarkers(google.maps, map, locations, infowindow)
+
+  addMarkers(google.maps, map, locations, infoWindow)
 }
 
-function addMarkers(maps, map, locations, infowindow) {
+function addMarkers(maps, map, locations, infoWindow) {
   var marker, i;
   for (i = 0; i < locations.length; i++) {
     marker = new google.maps.Marker({
@@ -39,8 +39,8 @@ function addMarkers(maps, map, locations, infowindow) {
 
     maps.event.addListener(marker, 'click', (function(marker, i) {
       return function() {
-        infowindow.setContent(locations[i][0]);
-        infowindow.open(map, marker);
+        infoWindow.setContent(locations[i][0]);
+        infoWindow.open(map, marker);
       }
     })(marker, i));
   }
