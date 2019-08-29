@@ -17,6 +17,7 @@ function initMap(locations) {
       infoWindow.setContent('Você está aqui.');
       infoWindow.open(map);
       map.setCenter(pos);
+      addUserLocationMarker(map, pos)
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
@@ -27,6 +28,7 @@ function initMap(locations) {
 
 
   addMarkers(google.maps, map, locations, infoWindow)
+
 }
 
 function addMarkers(maps, map, locations, infoWindow) {
@@ -44,6 +46,14 @@ function addMarkers(maps, map, locations, infoWindow) {
       }
     })(marker, i));
   }
+}
+
+function addUserLocationMarker(map, pos) {
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(pos.lat, pos.lng),
+    map: map,
+    icon: "http://labs.google.com/ridefinder/images/mm_20_orange.png"
+  });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
