@@ -3,10 +3,11 @@
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/event_item.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/map.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/components/event_item.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/components/map.css' %}">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX81CTR1RjAQwnG-9lWX17WzLojyFS7P0"></script>
-    <script src="{% static 'js/map.js' %}">
+    <script src="{% static 'events/js/map.js' %}">
     </script>
     {{ block.super }}
 {% endblock %}
