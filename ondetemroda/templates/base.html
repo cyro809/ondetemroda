@@ -5,14 +5,16 @@
         {% block head %}
             <title>{% block title %}{% endblock %}</title>
             <meta name='description' content='{% block description%}{% endblock%}'>
-            <link href="{% static 'css/fonts.css' %}" rel="stylesheet" media="screen">
-            <link href="{% static 'css/index.css' %}" rel="stylesheet" media="screen">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="keywords" content="capoeira, rodas, eventos, esporte, luta, dança, brasil">
+            <link href="{% static 'ondetemroda/css/fonts.css' %}" rel="stylesheet" media="screen">
+            <link href="{% static 'ondetemroda/css/index.css' %}" rel="stylesheet" media="screen">
             <link href="{% static 'vendor/css/bootstrap-grid.min.css'%}" rel="stylesheet" media="screen">
             <link href="{% static 'vendor/css/bootstrap-reboot.min.css'%}" rel="stylesheet" media="screen">
             <link href="{% static 'vendor/css/bootstrap.min.css'%}" rel="stylesheet" media="screen">
         {% endblock %}
     </head>
-    <body class="bg-dark">
+    <body class="bg-dark container">
     {% block body %}{% endblock %}
     </body>
 </html>

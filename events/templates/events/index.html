@@ -3,19 +3,35 @@
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/event_item.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/components/event_item.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/components/map.css' %}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX81CTR1RjAQwnG-9lWX17WzLojyFS7P0"></script>
+    <script src="{% static 'events/js/map.js' %}">
+    </script>
     {{ block.super }}
 {% endblock %}
-
+{% block title %}Lista de Rodas e Eventos de Capoeira | Onde Tem Roda{% endblock %}
 {% block body %}
     <div class="events__main">
-        <div class="container text-center my-5">
+        <div class="text-center my-5">
             <h1 class="event__title text-light">Eventos e Rodas</h1>
         </div>
-        <div class="py-5 px-5 row">
-        {% for event in events %}
-            {% include "events/includes/components/event_item.html" %}
-        {% endfor %}
+        <div class="row d-flex flex-column-reverse flex-lg-row">
+            <div class="col-lg-5" style="overflow-y: scroll;">
+                <div class="px-2">
+                {% for event in events %}
+                    {% include "events/includes/components/event_item.html" %}
+                {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-7 px-2">
+                {% include "events/includes/components/map.html" %}
+            </div>
         </div>
+        <script type="text/javascript">
+            var locations = {{ locations|safe }};
+            initMap(locations);
+        </script>
     </div>
 {% endblock %}
