@@ -26,7 +26,6 @@ SECRET_KEY = 'w!kc5e%a)8+l8@)ky4#qkn+zp7i)hp0j7*@d9@_0!(u&=(d7bm'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ondetemroda-env.6p3pcpjdgs.us-west-2.elasticbeanstalk.com',
     'localhost',
     'ondetemroda.com',
     'www.ondetemroda.com'
@@ -139,5 +138,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-STATIC_ROOT = 'static'
+STATIC_ROOT = '/opt/ondetemroda/static/'
 STATIC_URL = '/static/'
