@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ event.name }} Onde Tem Roda: Rodas e Eventos de Capoeira{% endblock %}
+{% block description %}Encontre rodas e eventos de capoeira com agilidade e facilidade.{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/components/index.css' %}">
+    </script>
+    {{ block.super }}
+{% endblock %}
+{% block body %}
+    <div class="container text-center py-5 text-light my-5">
+        <h1 class='home_title mb-3'>{{ event.NomeEvento }}</h1>
+        <p class="event-info__text"><span class="event-info_label">Endereço:</span> {{event.Endereco}}</p>
+        <p class="event-info__text"><span class="event-info_label">Data:</span> {{ event.EventDate }}</p>
+        <p class="event-info__text"><span class="event-info_label">Grupo:</span> {{event.Grupo}}</p>
+        <p class="event-info__text"><span class="event-info_label">Responsável:</span> {{event.Responsavel}}</p>
+    </div>
+{% endblock %}

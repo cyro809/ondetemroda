@@ -18,3 +18,9 @@ def get_locations_coordinates(events):
             1
         ])
     return locations
+
+def event(request, event_id):
+    r = requests.get('http://localhost:3000/events/{}'.format(event_id))
+    event = r.json()
+
+    return render(request, 'events/event.html', { 'event': event })
