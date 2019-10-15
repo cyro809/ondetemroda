@@ -2,19 +2,42 @@
 
 {% load static %}
 
-{% block title %}{{ event.name }} Onde Tem Roda: Rodas e Eventos de Capoeira{% endblock %}
+{% block title %}{{ event.NomeEvento }} - Onde Tem Roda: Rodas e Eventos de Capoeira{% endblock %}
 {% block description %}Encontre rodas e eventos de capoeira com agilidade e facilidade.{% endblock %}
 {% block head %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/components/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'events/css/event.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/components/map.css' %}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX81CTR1RjAQwnG-9lWX17WzLojyFS7P0"></script>
+    <script src="{% static 'events/js/map.js' %}">
     </script>
     {{ block.super }}
 {% endblock %}
 {% block body %}
-    <div class="container text-center py-5 text-light my-5">
-        <h1 class='home_title mb-3'>{{ event.NomeEvento }}</h1>
-        <p class="event-info__text"><span class="event-info_label">Endereço:</span> {{event.Endereco}}</p>
-        <p class="event-info__text"><span class="event-info_label">Data:</span> {{ event.EventDate }}</p>
-        <p class="event-info__text"><span class="event-info_label">Grupo:</span> {{event.Grupo}}</p>
-        <p class="event-info__text"><span class="event-info_label">Responsável:</span> {{event.Responsavel}}</p>
+    <div class="event-page__main">
+        <div class="row d-flex flex-lg-row">
+            <div class="col-lg-5">
+                <div class="px-2">
+                    <div class="text-center py-5 text-light my-5">
+                        <h1 class='home_title mb-3'>{{ event.NomeEvento }}</h1>
+                        <img src="{% static 'ondetemroda/img/placeholder240x180.png' %}" class="event__image mr-1"/>
+                        <p class="event-info__text"><span class="event-info_label">Endereço:</span> {{event.Endereco}}</p>
+                        <p class="event-info__text"><span class="event-info_label">Data:</span> {{ event.EventDate }}</p>
+                        <p class="event-info__text"><span class="event-info_label">Grupo:</span> {{event.Grupo}}</p>
+                        <p class="event-info__text"><span class="event-info_label">Responsável:</span> {{event.Responsavel}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 px-2">
+                {% include "events/includes/components/map.html" %}
+            </div>
+        </div>
+        <script type="text/javascript">
+            var locations = [[
+                "{{ event.NomeEvento }}",
+                {{ event.Latitude }},
+                {{ event.Longitude }}
+            ]];
+            initMap(locations);
+        </script>
     </div>
 {% endblock %}

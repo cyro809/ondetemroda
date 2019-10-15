@@ -1,0 +1,15 @@
+.home_title {
+  font-family: 'Roboto Black', sans-serif;
+  font-size: 36px;
+}
+
+.event-info__text {
+  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+  line-height: 20px;
+  margin-bottom: 0.05rem;
+  text-align: left;
+}
+
+.event-info_label {
+  font-family: 'Roboto Bold', Arial, Helvetica, sans-serif;
+}
