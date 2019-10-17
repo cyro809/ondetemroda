@@ -17,13 +17,15 @@
         <div class="row d-flex flex-lg-row">
             <div class="col-lg-5">
                 <div class="px-2">
-                    <div class="text-center py-5 text-light my-5">
+                    <div class="text-center text-light my-5">
                         <h1 class='home_title mb-3'>{{ event.NomeEvento }}</h1>
                         <img src="{% static 'ondetemroda/img/placeholder240x180.png' %}" class="event__image mr-1"/>
                         <p class="event-info__text"><span class="event-info_label">Endereço:</span> {{event.Endereco}}</p>
                         <p class="event-info__text"><span class="event-info_label">Data:</span> {{ event.EventDate }}</p>
                         <p class="event-info__text"><span class="event-info_label">Grupo:</span> {{event.Grupo}}</p>
                         <p class="event-info__text"><span class="event-info_label">Responsável:</span> {{event.Responsavel}}</p>
+                        <p class="event-info__text"><span class="event-info_label">Telefone do responsável:</span> {{event.ResponsavelTel}}</p>
+                        <p class="event-info__text"><span class="event-info_label">E-mail do responsável:</span> {{event.ResponsavelEmail}}</p>
                     </div>
                 </div>
             </div>
