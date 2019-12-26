@@ -7,6 +7,12 @@
             <meta name='description' content='{% block description%}{% endblock%}'>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="keywords" content="capoeira, rodas, eventos, esporte, luta, dança, brasil">
+            <!-- Begin Facebook Opengraph -->
+            <meta property="og:title" content="{% block ogtitle %}{% endblock %}">
+            <meta property="og:description" content="{% block ogdescription %}{% endblock%}">
+            <meta property="og:url" content="{{ request.get_full_path }}">
+            <meta property="og:image" content="{% static 'ondetemroda/img/placeholder240x180.png' %}">
+            <!-- End Facebook Opengraph -->
             <link href="{% static 'ondetemroda/css/fonts.css' %}" rel="stylesheet" media="screen">
             <link href="{% static 'ondetemroda/css/index.css' %}" rel="stylesheet" media="screen">
             <link href="{% static 'vendor/css/bootstrap-grid.min.css'%}" rel="stylesheet" media="screen">
